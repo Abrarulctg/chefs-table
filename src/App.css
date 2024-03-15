@@ -1,0 +1,11 @@
+.btn-chef-primary {
+    background-color: #10fa98;
+    padding: 15px 30px;
+    border: 0;
+}
+
+.btn-chef-primary:hover {
+    background-color: #00ca76;
+    padding: 15px 30px;
+    border: 0;
+}
