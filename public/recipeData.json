@@ -1,0 +1,183 @@
+[
+    {
+        "recipe_id": 1,
+        "recipe_name": "Homemade Margherita Pizza",
+        "short_description": "Classic Italian pizza topped with fresh tomatoes, mozzarella, and basil leaves.",
+        "ingredients": [
+            "Pizza dough",
+            "200 g fresh mozzarella cheese",
+            "2 large tomatoes",
+            "Fresh basil leaves",
+            "2 tbsp olive oil",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": 30,
+        "calories": "400 calorie",
+        "recipe_image": "https://i.ibb.co/b1Q3CrP/k-archive-b36036a54e1cf9c084f4b702a63e5a08f1e98983.jpg"
+    },
+    {
+        "recipe_id": 2,
+        "recipe_name": "Chicken Fajitas",
+        "short_description": "Sizzling hot chicken strips with onions and bell peppers, served with warm tortillas.",
+        "ingredients": [
+            "2 chicken breasts, sliced",
+            "1 onion, sliced",
+            "1 bell pepper, sliced",
+            "2 tbsp fajita seasoning",
+            "8 small tortillas",
+            "Sour cream and salsa for serving"
+        ],
+        "preparing_time": 20,
+        "calories": "350 calorie",
+        "recipe_image": "https://i.ibb.co/g9kkKYH/crunchy-rainbow-chicken-fajitas-hero.webp"
+    },
+    {
+        "recipe_id": 3,
+        "recipe_name": "Fresh Fruit Salad",
+        "short_description": "A colorful and healthy mix of seasonal fruits, perfect for a refreshing snack.",
+        "ingredients": [
+            "1 apple, diced",
+            "1 banana, sliced",
+            "1 orange, peeled and segmented",
+            "1 cup strawberries, sliced",
+            "1 cup grapes",
+            "1/4 cup honey or maple syrup"
+        ],
+        "preparing_time": 10,
+        "calories": "150 calorie",
+        "recipe_image": "https://i.ibb.co/K7HZhqX/4518422-8b9bac307f7a4d7fb4379b8c647b806d.jpg"
+    },
+    {
+        "recipe_id": 4,
+        "recipe_name": "Vegetable Curry",
+        "short_description": "A hearty and flavorful vegetarian curry with a variety of vegetables and aromatic spices.",
+        "ingredients": [
+            "2 potatoes, diced",
+            "1 carrot, sliced",
+            "1 cup cauliflower florets",
+            "1 cup green peas",
+            "1 onion, chopped",
+            "2 cloves garlic, minced",
+            "1 can coconut milk",
+            "2 tbsp curry powder",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": 40,
+        "calories": "300 calorie",
+        "recipe_image": "https://i.ibb.co/L9C9Ln5/indian-style-vegetable-curry-59371-1.jpg"
+    },
+    {
+        "recipe_id": 5,
+        "recipe_name": "Chocolate Chip Cookies",
+        "short_description": "Classic homemade cookies with gooey chocolate chips, perfect for satisfying your sweet tooth.",
+        "ingredients": [
+            "1 cup butter, softened",
+            "3/4 cup granulated sugar",
+            "3/4 cup brown sugar",
+            "2 eggs",
+            "1 tsp vanilla extract",
+            "2 1/4 cups all-purpose flour",
+            "1 tsp baking soda",
+            "1/2 tsp salt",
+            "2 cups chocolate chips"
+        ],
+        "preparing_time": 15,
+        "calories": "200 calorie",
+        "recipe_image": "https://i.ibb.co/4fFkkKQ/Chocolate-Chip-Cookies-close-2.jpg"
+    },
+    {
+        "recipe_id": 6,
+        "recipe_name": "Greek Salad",
+        "short_description": "A refreshing salad made with crisp lettuce, juicy tomatoes, cucumber, olives, and feta cheese, drizzled with a tangy vinaigrette.",
+        "ingredients": [
+            "1 head romaine lettuce, chopped",
+            "2 large tomatoes, diced",
+            "1 cucumber, sliced",
+            "1/2 cup Kalamata olives",
+            "1/2 cup crumbled feta cheese",
+            "2 tbsp olive oil",
+            "1 tbsp red wine vinegar",
+            "1 tsp dried oregano",
+            "Salt and pepper to taste"
+        ],
+        "preparing_time": 15,
+        "calories": "250 calorie",
+        "recipe_image": "https://i.ibb.co/Y0QdWWs/739-C7136-CBA2-4-DDC-8-D56-ECA409-F69-AB9-3-735x735.jpg"
+    },
+    {
+        "recipe_id": 7,
+        "recipe_name": "Penne Arrabiata",
+        "short_description": "A spicy and flavorful pasta dish made with penne pasta tossed in a zesty tomato sauce with garlic, chili flakes, and fresh basil.",
+        "ingredients": [
+            "300 g penne pasta",
+            "2 tbsp olive oil",
+            "4 cloves garlic, minced",
+            "1/2 tsp red pepper flakes",
+            "1 can (400 g) crushed tomatoes",
+            "1/4 cup fresh basil leaves, chopped",
+            "Salt and pepper to taste",
+            "Grated Parmesan cheese for serving"
+        ],
+        "preparing_time": 20,
+        "calories": "350 calorie",
+        "recipe_image": "https://i.ibb.co/0Bc7ThK/images-1.jpg"
+    },
+    {
+        "recipe_id": 8,
+        "recipe_name": "Mushroom Risotto",
+        "short_description": "Creamy and comforting risotto made with Arborio rice, mushrooms, onions, garlic, and Parmesan cheese.",
+        "ingredients": [
+            "1 cup Arborio rice",
+            "4 cups vegetable broth",
+            "2 tbsp olive oil",
+            "1 onion, diced",
+            "2 cloves garlic, minced",
+            "200 g mushrooms, sliced",
+            "1/2 cup dry white wine",
+            "1/4 cup grated Parmesan cheese",
+            "Salt and pepper to taste",
+            "Fresh parsley for garnish"
+        ],
+        "preparing_time": 30,
+        "calories": "400 calorie",
+        "recipe_image": "https://i.ibb.co/3CxmkTb/Original-9739-forest-mushroom-risotto.jpg"
+    },
+    {
+        "recipe_id": 9,
+        "recipe_name": "Chicken Alfredo Pasta",
+        "short_description": "Creamy pasta dish made with fettuccine pasta, tender chicken, and a rich Alfredo sauce made with butter, cream, and Parmesan cheese.",
+        "ingredients": [
+            "300 g fettuccine pasta",
+            "2 boneless, skinless chicken breasts",
+            "2 tbsp butter",
+            "2 cloves garlic, minced",
+            "1 cup heavy cream",
+            "1/2 cup grated Parmesan cheese",
+            "Salt and pepper to taste",
+            "Chopped parsley for garnish"
+        ],
+        "preparing_time": 25,
+        "calories": "450 calorie",
+        "recipe_image": "https://i.ibb.co/L1BNhhZ/Chicken-Alfredo-RC-SQ.jpg"
+    },
+    {
+        "recipe_id": 10,
+        "recipe_name": "Tofu Stir-Fry",
+        "short_description": "A flavorful stir-fry dish made with tofu, colorful bell peppers, broccoli, and a tangy stir-fry sauce.",
+        "ingredients": [
+            "400 g firm tofu, cubed",
+            "1 bell pepper, sliced",
+            "1 cup broccoli florets",
+            "2 tbsp soy sauce",
+            "1 tbsp hoisin sauce",
+            "1 tbsp rice vinegar",
+            "1 tsp sesame oil",
+            "2 cloves garlic, minced",
+            "1 tsp grated ginger",
+            "2 tbsp vegetable oil"
+        ],
+        "preparing_time": 20,
+        "calories": "300 calorie",
+        "recipe_image": "https://i.ibb.co/xmr3xwC/190130-tofu-stir-fry-horizontal-150-1549302524.gif"
+    }
+]
