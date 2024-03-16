@@ -1,9 +1,10 @@
 import './Card.css';
+import PropTypes from 'prop-types';
 
-const Card = ({ cards }) => {
+const Card = ({ cards, handleWantToCock }) => {
     // console.log(cards)
     const { calories, ingredients, preparing_time, recipe_image, recipe_name, short_description } = cards;
-    console.log(ingredients)
+    // console.log(ingredients)
     return (
         <div className="border-2 p-4 gap-x-4 rounded-xl">
             <img className="rounded-xl mb-6 w-full" src={recipe_image} alt="" />
@@ -21,10 +22,16 @@ const Card = ({ cards }) => {
                 <p><i className="fa fa-regular fa-clock"> </i><span> {preparing_time}</span> minutes</p>
                 <p className="ml-4"><i className="fa fa-thin fa-fire-flame-curved"></i><span> {calories}</span> calories</p>
             </div>
-            <button className="btn btn-chef-primary rounded-full my-6">Want to Cook</button>
+            <button onClick={() => handleWantToCock(cards)} className="btn btn-chef-primary rounded-full my-6">Want to Cook</button>
 
         </div>
     );
 };
+
+
+Card.propTypes = {
+    cards: PropTypes.object,
+    handleWantToCock: PropTypes.func
+}
 
 export default Card;
