@@ -4,6 +4,8 @@ import Banner from './components/Banner/Banner'
 import Header from './components/Header/Header'
 import SubSection from './components/SubSection/SubSection'
 import Cards from './components/Cards/Cards'
+import Footer from './components/Footer/Footer'
+import Cart from './components/Cart/Cart'
 
 function App() {
 
@@ -16,14 +18,16 @@ function App() {
         <Banner></Banner>
         <SubSection></SubSection>
 
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row gap-4">
           <div className="w-2/3">
             <Cards></Cards>
           </div>
           <div className="w-1/3">
-            <h2>cart</h2>
+            <Cart></Cart>
           </div></div>
+
       </div>
+      <Footer></Footer>
 
     </>
   )

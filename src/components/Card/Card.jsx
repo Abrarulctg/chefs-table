@@ -6,7 +6,7 @@ const Card = ({ cards }) => {
     console.log(ingredients)
     return (
         <div className="border-2 p-4 gap-x-4 rounded-xl">
-            <img className="rounded-xl mb-6" src={recipe_image} alt="" />
+            <img className="rounded-xl mb-6 w-full" src={recipe_image} alt="" />
             <h1 className="text-xl font-semibold text-[#282828]">{recipe_name}</h1>
             <p className="text-[#878787] text-base font-firaSans my-4">{short_description}</p>
             <hr className="text-[#878787] mb-4" />
