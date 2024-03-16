@@ -18,8 +18,8 @@ const Card = ({ cards }) => {
             </ul>
             <hr className="text-[#878787] my-4" />
             <div className="flex text-[#282828cc] text-base">
-                <p><span>{preparing_time}</span> minutes</p>
-                <p className="ml-4"><span>{calories}</span> calories</p>
+                <p><i className="fa fa-regular fa-clock"> </i><span> {preparing_time}</span> minutes</p>
+                <p className="ml-4"><i className="fa fa-thin fa-fire-flame-curved"></i><span> {calories}</span> calories</p>
             </div>
             <button className="btn btn-chef-primary rounded-full my-6">Want to Cook</button>
 
