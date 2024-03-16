@@ -1,5 +1,7 @@
-.indredient-list {
+.ingredient-list {
     list-style: list;
     list-style-type: disc;
     margin-left: 30px;
+    color: #878787;
+    font-size: 18px;
 }
