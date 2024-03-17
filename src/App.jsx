@@ -13,7 +13,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   // const [wantToCookCount, setWantToCookCount] = useState(0);
 
-  const [currentlyCooking, setCurrentlyCooking] = useState([]);
+  const [currentlyCookingItem, setCurrentlyCookingItem] = useState([]);
 
   const recipeIDs = [];
 
@@ -37,19 +37,17 @@ function App() {
     }
   }
 
+  // let removedIdFromWantToCookTable = [];
   //Handle Preparing Button
   const handlePreparing = (cartItem, recipe_id) => {
     const updatedCart = carts.filter(cart => cart.recipe_id !== recipe_id);
     setCarts(updatedCart);
 
-    const newCurrentlyCookingItem = [...currentlyCooking, cartItem];
-    setCurrentlyCooking(newCurrentlyCookingItem);
-    // console.log("preparing now", currentlyCooking)
-
-
-    console.log(currentlyCooking)
-    //eita currently cooking part er onno.. console a new item a add na kore cart-item er shate add kore feltece ekhon
+    // console.log(cartItem);
+    const newCookingItem = [...currentlyCookingItem, cartItem]
+    setCurrentlyCookingItem(newCookingItem);
   }
+  console.log(currentlyCookingItem);
 
   return (
     <>
@@ -68,7 +66,7 @@ function App() {
             <Cart
               carts={carts}
               handlePreparing={handlePreparing}
-              currentlyCooking={currentlyCooking}
+              currentlyCookingItem={currentlyCookingItem}
             ></Cart>
           </div></div>
 

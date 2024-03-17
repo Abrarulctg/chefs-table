@@ -1,10 +1,10 @@
-import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 import WantToCook from "../WantToCook/WantToCook";
+import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 import PropTypes from 'prop-types';
 
 
-const Cart = ({ carts, handlePreparing, currentlyCooking }) => {
-    console.log(carts);
+const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
+    console.log("Want To Cook Items are: ", carts);
     return (
         <div className="border-2 py-4 w-auto rounded-xl">
             <div>
@@ -42,7 +42,7 @@ const Cart = ({ carts, handlePreparing, currentlyCooking }) => {
             {/* Currently Cooking Table */}
             <div>
                 <div>
-                    <h1 className="text-2xl font-semibold text-[#282828] text-center mb-4">Currently Cooking: <span>{currentlyCooking.length}</span></h1>
+                    <h1 className="text-2xl font-semibold text-[#282828] text-center mb-4">Currently Cooking: <span>0</span></h1>
                     <hr />
                 </div>
                 <div className="overflow-x-visible">
@@ -59,15 +59,13 @@ const Cart = ({ carts, handlePreparing, currentlyCooking }) => {
                         <tbody className="p-0 mb-4">
                             {/* <!-- row 1 ::: WantToCook Table row --> */}
                             {
-
+                                currentlyCookingItem.map((rItem, idx) => <CurrentlyCooking key={rItem.recipe_id} id={idx} cookingItem={rItem} ></CurrentlyCooking>)
                             }
                         </tbody>
                     </table>
                 </div>
             </div>
-            {/* <CurrentlyCooking
-                currentlyCooking={currentlyCooking}
-            ></CurrentlyCooking> */}
+
         </div>
     );
 };
@@ -75,9 +73,9 @@ const Cart = ({ carts, handlePreparing, currentlyCooking }) => {
 
 
 Cart.propTypes = {
-    carts: PropTypes.object,
+    carts: PropTypes.array,
     handlePreparing: PropTypes.func,
-    currentlyCooking: PropTypes.func
+    currentlyCookingItem: PropTypes.array
 }
 
 export default Cart;
