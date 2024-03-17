@@ -11,15 +11,37 @@ import { useState } from 'react'
 function App() {
 
   const [carts, setCarts] = useState([]);
-  const [wantToCookCount, setWantToCookCount] = useState(0);
+  // const [wantToCookCount, setWantToCookCount] = useState(0);
 
-  const handleWantToCock = (cards) => {
-    console.log("want to cock btn clicked", cards)
-    const newCartItem = [...carts, cards];
-    setCarts(newCartItem);
-    setWantToCookCount(wantToCookCount + 1);
+  const handleWantToCock = (cards, recipe_id) => {
+    const recipeIDs = [];
+    for (const cart of carts) {
+      // console.log(cart.recipe_id);
+      recipeIDs.push(cart.recipe_id)
+    }
+    if (recipeIDs.includes(recipe_id)) {
+      {
+        <div className="toast toast-top toast-end">
+          <div className="alert alert-info">
+            <span>You can not select same item</span>
+          </div>
+        </div>
+      }
+    }
+    else {
+      const newCartItem = [...carts, cards];
+      setCarts(newCartItem);
+    }
+
+
+
+
+    // setWantToCookCount(wantToCookCount + 1);
   }
 
+  const handlePreparing = (cartItem) => {
+    console.log("preparing now", cartItem)
+  }
 
   return (
     <>
@@ -38,7 +60,7 @@ function App() {
           <div className="w-2/5">
             <Cart
               carts={carts}
-              wantToCookCount={wantToCookCount}
+              handlePreparing={handlePreparing}
             ></Cart>
           </div></div>
 

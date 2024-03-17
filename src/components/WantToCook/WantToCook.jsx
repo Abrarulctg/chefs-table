@@ -1,17 +1,29 @@
+import PropTypes from 'prop-types';
 
-const WantToCook = ({ cartItem, wantToCookCount }) => {
-    console.log(wantToCookCount);
+
+const WantToCook = ({ cartItem, handlePreparing, id }) => {
+    // console.log(wantToCookCount);
+    const { calories, preparing_time, recipe_name } = cartItem;
+
 
     return (
-        <tr className="bg-[#28282808] mt-10 px-">
-            <th>{wantToCookCount}</th>
-            <td>rec name</td>
-            <td>20 minutes</td>
-            <td>400 calories</td>
-            <td><button className="btn btn-chef-primary rounded-full">Preparing</button></td>
+        <tr className="bg-[#28282808] mt-10 px-0">
+            <th>{id + 1}</th>
+            <td>{recipe_name}</td>
+            <td>{preparing_time} minutes</td>
+            <td>{calories} calories</td>
+            <td><button onClick={handlePreparing} className="btn btn-chef-primary rounded-full">Preparing</button></td>
         </tr>
 
     );
 };
+
+
+
+WantToCook.propTypes = {
+    cartItem: PropTypes.object,
+    handlePreparing: PropTypes.func
+}
+
 
 export default WantToCook;

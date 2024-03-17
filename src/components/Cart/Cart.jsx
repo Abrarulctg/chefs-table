@@ -1,13 +1,14 @@
-import { parse } from "postcss";
+import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 import WantToCook from "../WantToCook/WantToCook";
+import PropTypes from 'prop-types';
 
-const Cart = ({ carts, wantToCookCount }) => {
+
+const Cart = ({ carts, handlePreparing }) => {
     console.log(carts);
-    // const { calories, ingredients, preparing_time, recipe_image, recipe_id, recipe_name, short_description } = carts;
     return (
-        <div className="border-2 p-4">
+        <div className="border-2 py-4 w-auto rounded-xl">
             <div>
-                <h1 className="text-2xl font-semibold text-[#282828] text-center">Want to cook: <span>{carts.length}</span></h1>
+                <h1 className="text-2xl font-semibold text-[#282828] text-center mb-4">Want to cook: <span>{carts.length}</span></h1>
                 <hr />
             </div>
             <div className="">
@@ -22,21 +23,32 @@ const Cart = ({ carts, wantToCookCount }) => {
                                 <th>Calories</th>
                             </tr>
                         </thead>
-                        <tbody className="p-0">
+                        <tbody className="p-0 mb-4">
                             {/* <!-- row 1 --> */}
                             {
-                                carts.map((p, idx) => <WantToCook key={idx} cartItem={p} wantToCookCount={wantToCookCount}></WantToCook>)
+                                carts.map((p, idx) => <WantToCook
+                                    key={p.recipe_id}
+                                    id={idx}
+                                    cartItem={p}
+                                    handlePreparing={handlePreparing}
+                                ></WantToCook>)
                             }
-
-
-
 
                         </tbody>
                     </table>
                 </div>
             </div>
+
+            <CurrentlyCooking></CurrentlyCooking>
         </div>
     );
 };
+
+
+
+Cart.propTypes = {
+    carts: PropTypes.object,
+    handlePreparing: PropTypes.func
+}
 
 export default Cart;
