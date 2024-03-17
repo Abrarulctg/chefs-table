@@ -7,31 +7,61 @@ import Cards from './components/Cards/Cards'
 import Footer from './components/Footer/Footer'
 import Cart from './components/Cart/Cart'
 import { useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-
   const [carts, setCarts] = useState([]);
   // const [wantToCookCount, setWantToCookCount] = useState(0);
 
   const [currentlyCookingItem, setCurrentlyCookingItem] = useState([]);
-
   const recipeIDs = [];
+  // const notify = () => toast("Wow so easy!");
+
+  // const ToasterShow = () => {
+  //   return `{<div className="toast toast-top toast-end">
+  //     <div className="alert alert-info">
+  //       <span>New mail arrived.</span>
+  //     </div>
+  //   </div>}`
+  // }
+  const successAlert = () => toast.success('Success, Recipe added to the cart!', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    // transition: Bounce,
+  });
+  const errorAlert = () => toast.error('You can not select same recipe at a time!', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "colored",
+    // transition: Bounce,
+  });
+
 
   const handleWantToCock = (cards, recipe_id) => {
     for (const cart of carts) {
       recipeIDs.push(cart.recipe_id)
     }
     if (recipeIDs.includes(recipe_id)) {
-      {
-        // A toast will be added
-        <div className="toast toast-top toast-end">
-          <div className="alert alert-info">
-            <span>You can not select same item</span>
-          </div>
-        </div>
-      }
+      // console.log("toaster Show")
+      errorAlert()
     }
     else {
+      successAlert()
       const newCartItem = [...carts, cards];
       setCarts(newCartItem);
     }
@@ -49,8 +79,26 @@ function App() {
   }
   console.log(currentlyCookingItem);
 
+
+
+
   return (
     <>
+      {/* Display Toaster */}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition:Bounce
+      />
+
       <div className='max-w-6xl mx-auto'>
         <Header></Header>
         <Banner></Banner>

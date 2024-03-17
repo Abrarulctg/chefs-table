@@ -42,7 +42,7 @@ const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
             {/* Currently Cooking Table */}
             <div>
                 <div>
-                    <h1 className="text-2xl font-semibold text-[#282828] text-center mb-4">Currently Cooking: <span>0</span></h1>
+                    <h1 className="text-2xl font-semibold text-[#282828] text-center my-4">Currently Cooking: <span>0</span></h1>
                     <hr />
                 </div>
                 <div className="overflow-x-visible">
@@ -61,6 +61,12 @@ const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
                             {
                                 currentlyCookingItem.map((rItem, idx) => <CurrentlyCooking key={rItem.recipe_id} id={idx} cookingItem={rItem} ></CurrentlyCooking>)
                             }
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <th>Total Time: 0 minutes </th>
+                                <th>Total Calories: 0 Calories</th>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
