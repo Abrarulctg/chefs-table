@@ -9,8 +9,7 @@ const Footer = () => {
                         <div className="flex justify-center">
                             <h1 className="text-4xl font-extrabold italic mb-4 text-[#12132d]">Chefs Table</h1>
                         </div>
-                        <p className="text-[#12132db3]">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                            roots in a piece of classical Latin literature from 45 BC
+                        <p className="text-[#12132db3]">At the Chefs Table, diners embark on an extraordinary culinary journey, indulging in an immersive experience that unveils the chefs artistic vision and passion for gastronomy, creating unforgettable moments of culinary delight.
                         </p>
                         {/* <!-- social icon container --> */}
                         <div className="flex justify-center my-8 gap-8">
@@ -20,7 +19,7 @@ const Footer = () => {
                             <i className="fa-brands fa-github"></i>
                         </div>
                         <hr />
-                        <p className="text-[#12132d80] mt-8">&copy 2024, All Rights Reserved.</p>
+                        <p className="text-[#12132d80] mt-8">© 2024, All Rights Reserved.</p>
                     </div>
                 </div>
             </footer>

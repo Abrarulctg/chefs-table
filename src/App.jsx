@@ -19,15 +19,9 @@ function App() {
 
   const [currentlyCookingItem, setCurrentlyCookingItem] = useState([]);
   const recipeIDs = [];
-  // const notify = () => toast("Wow so easy!");
+  const [preparingTime, setPreparingTime] = useState(0);
+  const [caloriesSum, setCaloriesSum] = useState(0);
 
-  // const ToasterShow = () => {
-  //   return `{<div className="toast toast-top toast-end">
-  //     <div className="alert alert-info">
-  //       <span>New mail arrived.</span>
-  //     </div>
-  //   </div>}`
-  // }
   const successAlert = () => toast.success('Success, Recipe added to the cart!', {
     position: "top-right",
     autoClose: 5000,
@@ -67,7 +61,6 @@ function App() {
     }
   }
 
-  // let removedIdFromWantToCookTable = [];
   //Handle Preparing Button
   const handlePreparing = (cartItem, recipe_id) => {
     const updatedCart = carts.filter(cart => cart.recipe_id !== recipe_id);
@@ -76,8 +69,13 @@ function App() {
     // console.log(cartItem);
     const newCookingItem = [...currentlyCookingItem, cartItem]
     setCurrentlyCookingItem(newCookingItem);
+
+    const totalMin = newCookingItem.reduce((firstNum, currentItem) => firstNum + currentItem.preparing_time, 0)
+    setPreparingTime(totalMin);
+    const totalCalories = newCookingItem.reduce((firstNum, currentItem) => firstNum + currentItem.calories, 0)
+    setCaloriesSum(totalCalories);
   }
-  // console.log(currentlyCookingItem);
+
 
   return (
     <>
@@ -112,6 +110,8 @@ function App() {
               carts={carts}
               handlePreparing={handlePreparing}
               currentlyCookingItem={currentlyCookingItem}
+              preparingTime={preparingTime}
+              caloriesSum={caloriesSum}
             ></Cart>
           </div></div>
 

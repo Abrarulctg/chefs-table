@@ -3,8 +3,9 @@ import CurrentlyCooking from "../CurrentlyCooking/CurrentlyCooking";
 import PropTypes from 'prop-types';
 
 
-const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
+const Cart = ({ carts, handlePreparing, currentlyCookingItem, preparingTime, caloriesSum }) => {
     // console.log("Want To Cook Items are: ", carts);
+
     return (
         <div className="border-2 py-4 w-auto rounded-xl">
             <div>
@@ -59,13 +60,19 @@ const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
                         <tbody className="p-0 mb-4">
                             {/* <!-- row 1 ::: WantToCook Table row --> */}
                             {
-                                currentlyCookingItem.map((rItem, idx) => <CurrentlyCooking key={rItem.recipe_id} id={idx} cookingItem={rItem} ></CurrentlyCooking>)
+                                currentlyCookingItem.map((rItem, idx) =>
+                                    <CurrentlyCooking
+                                        key={rItem.recipe_id}
+                                        id={idx}
+                                        cookingItem={rItem}
+
+                                    ></CurrentlyCooking>)
                             }
                             <tr>
                                 <td></td>
                                 <td></td>
-                                <th>Total Time: 0 minutes </th>
-                                <th>Total Calories: 0 Calories</th>
+                                <th>Total Time: <span className="text-base">{preparingTime}</span> minutes </th>
+                                <th>Total Calories: {caloriesSum} Calories</th>
                             </tr>
                         </tbody>
                     </table>
@@ -81,7 +88,10 @@ const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
 Cart.propTypes = {
     carts: PropTypes.array,
     handlePreparing: PropTypes.func,
-    currentlyCookingItem: PropTypes.array
+    currentlyCookingItem: PropTypes.array,
+    preparingTime: PropTypes.number,
+    caloriesSum: PropTypes.number
+
 }
 
 export default Cart;
