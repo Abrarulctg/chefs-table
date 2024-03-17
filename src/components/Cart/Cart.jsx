@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
-    console.log("Want To Cook Items are: ", carts);
+    // console.log("Want To Cook Items are: ", carts);
     return (
         <div className="border-2 py-4 w-auto rounded-xl">
             <div>
@@ -42,7 +42,7 @@ const Cart = ({ carts, handlePreparing, currentlyCookingItem }) => {
             {/* Currently Cooking Table */}
             <div>
                 <div>
-                    <h1 className="text-2xl font-semibold text-[#282828] text-center my-4">Currently Cooking: <span>0</span></h1>
+                    <h1 className="text-2xl font-semibold text-[#282828] text-center my-4">Currently Cooking: <span>{currentlyCookingItem.length}</span></h1>
                     <hr />
                 </div>
                 <div className="overflow-x-visible">

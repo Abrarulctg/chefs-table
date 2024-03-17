@@ -77,10 +77,7 @@ function App() {
     const newCookingItem = [...currentlyCookingItem, cartItem]
     setCurrentlyCookingItem(newCookingItem);
   }
-  console.log(currentlyCookingItem);
-
-
-
+  // console.log(currentlyCookingItem);
 
   return (
     <>
